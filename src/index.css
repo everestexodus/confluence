@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Prime Scholars Academy Design System - Modern Nigerian Educational Excellence */
+
+@layer base {
+  :root {
+    /* Core Educational Brand Colors */
+    --background: 0 0% 100%;
+    --foreground: 222 84% 4.9%;
+    
+    /* School Brand Identity */
+    --school-navy: 222 84% 15%;
+    --school-gold: 43 96% 56%;
+    --school-gold-light: 43 96% 88%;
+    --school-navy-light: 222 84% 25%;
+    --school-gray: 220 13% 91%;
+    --school-text: 222 84% 4.9%;
+    
+    /* Academic Section Colors */
+    --academic-primary: 222 84% 15%;
+    --academic-secondary: 43 96% 56%;
+    --academic-accent: 142 71% 45%;
+    
+    /* Interactive Elements */
+    --primary: 222 84% 15%;
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 222 84% 25%;
+    
+    --secondary: 43 96% 56%;
+    --secondary-foreground: 222 84% 15%;
+    --secondary-hover: 43 96% 66%;
+    
+    --accent: 142 71% 45%;
+    --accent-foreground: 0 0% 100%;
+    --accent-hover: 142 71% 55%;
+    
+    /* Surface Colors */
+    --card: 0 0% 100%;
+    --card-foreground: 222 84% 4.9%;
+    
+    --muted: 220 13% 96%;
+    --muted-foreground: 220 9% 46%;
+    
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 222 84% 15%;
+    
+    /* Premium Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(222 84% 15%), hsl(222 84% 25%));
+    --gradient-gold: linear-gradient(135deg, hsl(43 96% 56%), hsl(43 96% 66%));
+    --gradient-overlay: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6));
+    
+    /* Elegant Shadows */
+    --shadow-soft: 0 2px 15px -3px rgba(0, 0, 0, 0.07), 0 10px 20px -2px rgba(0, 0, 0, 0.04);
+    --shadow-medium: 0 4px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 30px -5px rgba(0, 0, 0, 0.04);
+    --shadow-gold: 0 4px 20px rgba(43, 96%, 56%, 0.15);
+    
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-inter;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-poppins;
+  }
+}
+
+@layer components {
+  /* Educational Hero Section */
+  .hero-section {
+    @apply relative min-h-screen flex items-center justify-center overflow-hidden;
+    background: var(--gradient-hero);
+  }
+  
+  .hero-overlay {
+    @apply absolute inset-0 bg-gradient-to-r from-black/60 to-black/40;
+  }
+  
+  /* Premium Cards */
+  .school-card {
+    @apply bg-card rounded-xl p-8 shadow-[var(--shadow-soft)] hover:shadow-[var(--shadow-medium)] transition-all duration-300 border border-border/50;
+  }
+  
+  .school-card-premium {
+    @apply bg-gradient-to-br from-card to-muted/30 rounded-xl p-8 shadow-[var(--shadow-medium)] hover:shadow-[var(--shadow-gold)] transition-all duration-300 border border-border/50;
+  }
+  
+  /* Academic Section Styling */
+  .academic-section {
+    @apply py-20 relative overflow-hidden;
+  }
+  
+  .academic-section::before {
+    content: '';
+    @apply absolute top-0 left-0 w-full h-full bg-gradient-to-br from-muted/30 to-transparent -z-10;
+  }
+  
+  /* Testimonial Cards */
+  .testimonial-card {
+    @apply bg-card/95 backdrop-blur-sm rounded-xl p-6 shadow-[var(--shadow-soft)] border border-border/30 hover:shadow-[var(--shadow-medium)] transition-all duration-300;
+  }
+}
