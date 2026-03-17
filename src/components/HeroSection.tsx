@@ -9,7 +9,7 @@ const HeroSection = () => {
       <div className="absolute inset-0">
         <img
           src={schoolCampus}
-          alt="Prime Scholars Academy Campus"
+          alt="Confluence Int School Campus"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-school-navy/80 to-school-navy/60"></div>
@@ -32,7 +32,7 @@ const HeroSection = () => {
 
           {/* Subheadline */}
           <p className="mx-auto mb-8 max-w-2xl text-white/90 text-lg md:text-xl">
-            Prime Scholars Academy, Abuja - Where academic excellence meets character development. 
+            Confluence Int School, kogi - Where academic excellence meets character development. 
             Providing world-class education from Crèche to Secondary level.
           </p>
 

@@ -29,19 +29,19 @@ const AboutSection = () => {
 
   return (
     <section id="about" className="academic-section">
-      <div className="container mx-auto px-4 lg:px-6">
+      <div className="mx-auto px-4 lg:px-6 container">
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-5xl font-bold text-school-navy mb-6">
-            About Prime Scholars Academy
+        <div className="mb-16 text-center">
+          <h2 className="mb-6 font-bold text-school-navy text-3xl md:text-5xl">
+            About Confluence Int School
           </h2>
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+          <p className="mx-auto max-w-3xl text-muted-foreground text-lg">
             For over 15 years, we have been shaping young minds and nurturing future leaders through 
-            world-class education and character development in the heart of Abuja.
+            world-class education and character development in the heart of kogi.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-16 items-center mb-20">
+        <div className="items-center gap-16 grid lg:grid-cols-2 mb-20">
           {/* Principal's Message */}
           <div>
             <div className="school-card-premium">
@@ -49,22 +49,22 @@ const AboutSection = () => {
                 <img
                   src={principalImage}
                   alt="Dr. Adanna Okoro, Principal"
-                  className="w-20 h-20 rounded-full object-cover border-4 border-school-gold"
+                  className="border-4 border-school-gold rounded-full w-20 h-20 object-cover"
                 />
                 <div>
-                  <h3 className="text-2xl font-bold text-school-navy mb-2">Dr. Adanna Okoro</h3>
-                  <p className="text-school-gold font-semibold">Principal & CEO</p>
+                  <h3 className="mb-2 font-bold text-school-navy text-2xl">Dr. Adanna Okoro</h3>
+                  <p className="font-semibold text-school-gold">Principal & CEO</p>
                 </div>
               </div>
               
-              <blockquote className="text-lg text-school-text italic mb-6">
-                "At Prime Scholars Academy, we believe every child is uniquely gifted. Our mission is to 
+              <blockquote className="mb-6 text-school-text text-lg italic">
+                "At Confluence Int School, we believe every child is uniquely gifted. Our mission is to 
                 provide an environment where these gifts can flourish, where academic excellence meets 
                 character development, and where young minds are prepared to make meaningful contributions 
                 to society."
               </blockquote>
               
-              <div className="text-school-navy font-semibold">
+              <div className="font-semibold text-school-navy">
                 - PhD Educational Leadership, Cambridge University
               </div>
             </div>
@@ -73,7 +73,7 @@ const AboutSection = () => {
           {/* Mission & Vision */}
           <div className="space-y-8">
             <div className="school-card">
-              <h3 className="text-2xl font-bold text-school-navy mb-4">Our Mission</h3>
+              <h3 className="mb-4 font-bold text-school-navy text-2xl">Our Mission</h3>
               <p className="text-school-text leading-relaxed">
                 To provide holistic, world-class education that develops academic excellence, 
                 character, and leadership skills in every student, preparing them to become 
@@ -82,7 +82,7 @@ const AboutSection = () => {
             </div>
 
             <div className="school-card">
-              <h3 className="text-2xl font-bold text-school-navy mb-4">Our Vision</h3>
+              <h3 className="mb-4 font-bold text-school-navy text-2xl">Our Vision</h3>
               <p className="text-school-text leading-relaxed">
                 To be Nigeria's premier educational institution, recognized internationally 
                 for academic excellence, innovative teaching methods, and the development 
@@ -94,14 +94,14 @@ const AboutSection = () => {
 
         {/* Core Values */}
         <div className="mb-16">
-          <h3 className="text-3xl font-bold text-school-navy text-center mb-12">Our Core Values</h3>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <h3 className="mb-12 font-bold text-school-navy text-3xl text-center">Our Core Values</h3>
+          <div className="gap-8 grid md:grid-cols-2 lg:grid-cols-4">
             {values.map((value, index) => (
-              <Card key={index} className="school-card text-center group hover:scale-105 transition-transform duration-300">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-school-gold/10 rounded-full mb-6 group-hover:bg-school-gold/20 transition-colors">
-                  <value.icon className="h-8 w-8 text-school-gold" />
+              <Card key={index} className="group text-center hover:scale-105 transition-transform duration-300 school-card">
+                <div className="inline-flex justify-center items-center bg-school-gold/10 group-hover:bg-school-gold/20 mb-6 rounded-full w-16 h-16 transition-colors">
+                  <value.icon className="w-8 h-8 text-school-gold" />
                 </div>
-                <h4 className="text-xl font-bold text-school-navy mb-4">{value.title}</h4>
+                <h4 className="mb-4 font-bold text-school-navy text-xl">{value.title}</h4>
                 <p className="text-muted-foreground">{value.description}</p>
               </Card>
             ))}
@@ -110,15 +110,15 @@ const AboutSection = () => {
 
         {/* CTA Section */}
         <div className="text-center">
-          <div className="school-card-premium max-w-2xl mx-auto">
-            <h3 className="text-2xl font-bold text-school-navy mb-4">
+          <div className="mx-auto max-w-2xl school-card-premium">
+            <h3 className="mb-4 font-bold text-school-navy text-2xl">
               Ready to Join Our Community?
             </h3>
-            <p className="text-muted-foreground mb-6">
-              Discover how Prime Scholars Academy can help your child reach their full potential. 
+            <p className="mb-6 text-muted-foreground">
+              Discover how Confluence Int School can help your child reach their full potential. 
               Schedule a visit today and see our world-class facilities firsthand.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex sm:flex-row flex-col justify-center gap-4">
               <Button variant="admission" size="lg">
                 Schedule a Visit
               </Button>

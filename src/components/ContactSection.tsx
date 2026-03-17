@@ -9,7 +9,7 @@ const ContactSection = () => {
     {
       icon: MapPin,
       title: "Visit Us",
-      details: ["Plot 123, Cadastral Zone A07", "Wuse 2, Abuja", "Federal Capital Territory"],
+      details: ["Plot 123, Cadastral Zone A07", "Lokoja, kogi", "Federal Capital Territory"],
       color: "bg-blue-100 text-blue-600"
     },
     {
@@ -39,30 +39,30 @@ const ContactSection = () => {
   ];
 
   return (
-    <section id="contact" className="py-20 bg-muted/30">
-      <div className="container mx-auto px-4 lg:px-6">
+    <section id="contact" className="bg-muted/30 py-20">
+      <div className="mx-auto px-4 lg:px-6 container">
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-5xl font-bold text-school-navy mb-6">
+        <div className="mb-16 text-center">
+          <h2 className="mb-6 font-bold text-school-navy text-3xl md:text-5xl">
             Get in Touch
           </h2>
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+          <p className="mx-auto max-w-3xl text-muted-foreground text-lg">
             We'd love to hear from you. Whether you have questions about admissions, want to schedule 
             a visit, or need more information, our team is here to help.
           </p>
         </div>
 
         {/* Contact Information Cards */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+        <div className="gap-8 grid md:grid-cols-2 lg:grid-cols-4 mb-16">
           {contactInfo.map((info, index) => (
-            <Card key={index} className="school-card text-center group hover:scale-105 transition-transform duration-300">
+            <Card key={index} className="group text-center hover:scale-105 transition-transform duration-300 school-card">
               <div className={`inline-flex items-center justify-center w-16 h-16 rounded-full mb-6 ${info.color}`}>
-                <info.icon className="h-8 w-8" />
+                <info.icon className="w-8 h-8" />
               </div>
-              <h4 className="text-xl font-bold text-school-navy mb-4">{info.title}</h4>
+              <h4 className="mb-4 font-bold text-school-navy text-xl">{info.title}</h4>
               <div className="space-y-1">
                 {info.details.map((detail, idx) => (
-                  <p key={idx} className="text-sm text-muted-foreground">{detail}</p>
+                  <p key={idx} className="text-muted-foreground text-sm">{detail}</p>
                 ))}
               </div>
             </Card>
@@ -70,15 +70,15 @@ const ContactSection = () => {
         </div>
 
         {/* Contact Form & Map */}
-        <div className="grid lg:grid-cols-2 gap-16">
+        <div className="gap-16 grid lg:grid-cols-2">
           {/* Contact Form */}
           <div>
-            <h3 className="text-3xl font-bold text-school-navy mb-8">Send Us a Message</h3>
+            <h3 className="mb-8 font-bold text-school-navy text-3xl">Send Us a Message</h3>
             <div className="school-card">
               <form className="space-y-6">
-                <div className="grid md:grid-cols-2 gap-4">
+                <div className="gap-4 grid md:grid-cols-2">
                   <div>
-                    <label className="block text-sm font-medium text-school-navy mb-2">
+                    <label className="block mb-2 font-medium text-school-navy text-sm">
                       First Name *
                     </label>
                     <Input 
@@ -87,7 +87,7 @@ const ContactSection = () => {
                     />
                   </div>
                   <div>
-                    <label className="block text-sm font-medium text-school-navy mb-2">
+                    <label className="block mb-2 font-medium text-school-navy text-sm">
                       Last Name *
                     </label>
                     <Input 
@@ -98,7 +98,7 @@ const ContactSection = () => {
                 </div>
                 
                 <div>
-                  <label className="block text-sm font-medium text-school-navy mb-2">
+                  <label className="block mb-2 font-medium text-school-navy text-sm">
                     Email Address *
                   </label>
                   <Input 
@@ -109,7 +109,7 @@ const ContactSection = () => {
                 </div>
                 
                 <div>
-                  <label className="block text-sm font-medium text-school-navy mb-2">
+                  <label className="block mb-2 font-medium text-school-navy text-sm">
                     Phone Number
                   </label>
                   <Input 
@@ -120,10 +120,10 @@ const ContactSection = () => {
                 </div>
                 
                 <div>
-                  <label className="block text-sm font-medium text-school-navy mb-2">
+                  <label className="block mb-2 font-medium text-school-navy text-sm">
                     Subject *
                   </label>
-                  <select className="w-full border border-border rounded-md px-3 py-2 bg-background focus:border-school-gold focus:ring-1 focus:ring-school-gold">
+                  <select className="bg-background px-3 py-2 border border-border focus:border-school-gold rounded-md focus:ring-1 focus:ring-school-gold w-full">
                     <option value="">Select a subject</option>
                     <option value="admissions">Admissions Inquiry</option>
                     <option value="visit">Schedule a Visit</option>
@@ -134,7 +134,7 @@ const ContactSection = () => {
                 </div>
                 
                 <div>
-                  <label className="block text-sm font-medium text-school-navy mb-2">
+                  <label className="block mb-2 font-medium text-school-navy text-sm">
                     Message *
                   </label>
                   <Textarea 
@@ -152,16 +152,16 @@ const ContactSection = () => {
 
           {/* Map & Additional Info */}
           <div>
-            <h3 className="text-3xl font-bold text-school-navy mb-8">Find Us</h3>
+            <h3 className="mb-8 font-bold text-school-navy text-3xl">Find Us</h3>
             
             {/* Map Placeholder */}
-            <div className="school-card mb-8">
-              <div className="aspect-video bg-muted rounded-lg flex items-center justify-center mb-4">
+            <div className="mb-8 school-card">
+              <div className="flex justify-center items-center bg-muted mb-4 rounded-lg aspect-video">
                 <div className="text-center">
-                  <MapPin className="h-16 w-16 text-school-gold mx-auto mb-4" />
-                  <p className="text-school-navy font-semibold">Interactive Map</p>
-                  <p className="text-sm text-muted-foreground">
-                    Plot 123, Cadastral Zone A07, Wuse 2, Abuja
+                  <MapPin className="mx-auto mb-4 w-16 h-16 text-school-gold" />
+                  <p className="font-semibold text-school-navy">Interactive Map</p>
+                  <p className="text-muted-foreground text-sm">
+                    Plot 123, Cadastral Zone A07, Wuse 2, kogi
                   </p>
                 </div>
               </div>
@@ -172,7 +172,7 @@ const ContactSection = () => {
 
             {/* Quick Actions */}
             <div className="school-card-premium">
-              <h4 className="text-xl font-bold text-school-navy mb-6 text-center">
+              <h4 className="mb-6 font-bold text-school-navy text-xl text-center">
                 Quick Actions
               </h4>
               <div className="space-y-4">
@@ -188,8 +188,8 @@ const ContactSection = () => {
               </div>
               
               {/* Social Media */}
-              <div className="mt-8 pt-6 border-t border-border">
-                <h5 className="font-semibold text-school-navy mb-4 text-center">Follow Us</h5>
+              <div className="mt-8 pt-6 border-border border-t">
+                <h5 className="mb-4 font-semibold text-school-navy text-center">Follow Us</h5>
                 <div className="flex justify-center space-x-4">
                   {socialLinks.map((social, index) => (
                     <a
@@ -198,7 +198,7 @@ const ContactSection = () => {
                       className={`p-3 bg-white rounded-full shadow-md hover:shadow-lg transition-all duration-300 ${social.color}`}
                       aria-label={social.name}
                     >
-                      <social.icon className="h-5 w-5" />
+                      <social.icon className="w-5 h-5" />
                     </a>
                   ))}
                 </div>

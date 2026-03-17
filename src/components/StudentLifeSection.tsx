@@ -65,13 +65,13 @@ const StudentLifeSection = () => {
 
   return (
     <section id="student-life" className="py-20">
-      <div className="container mx-auto px-4 lg:px-6">
+      <div className="mx-auto px-4 lg:px-6 container">
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-5xl font-bold text-school-navy mb-6">
+        <div className="mb-16 text-center">
+          <h2 className="mb-6 font-bold text-school-navy text-3xl md:text-5xl">
             Vibrant Student Life
           </h2>
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+          <p className="mx-auto max-w-3xl text-muted-foreground text-lg">
             Beyond academics, we offer a rich array of extracurricular activities that help students 
             discover their talents, build friendships, and develop leadership skills.
           </p>
@@ -79,20 +79,20 @@ const StudentLifeSection = () => {
 
         {/* Extracurricular Activities */}
         <div className="mb-20">
-          <h3 className="text-3xl font-bold text-school-navy text-center mb-12">
+          <h3 className="mb-12 font-bold text-school-navy text-3xl text-center">
             Extracurricular Activities
           </h3>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="gap-8 grid md:grid-cols-2 lg:grid-cols-4">
             {activities.map((activity, index) => (
-              <Card key={index} className="school-card text-center group hover:scale-105 transition-transform duration-300">
+              <Card key={index} className="group text-center hover:scale-105 transition-transform duration-300 school-card">
                 <div className={`inline-flex items-center justify-center w-16 h-16 rounded-full mb-6 ${activity.color}`}>
-                  <activity.icon className="h-8 w-8" />
+                  <activity.icon className="w-8 h-8" />
                 </div>
-                <h4 className="text-xl font-bold text-school-navy mb-4">{activity.category}</h4>
-                <ul className="space-y-2 text-sm text-muted-foreground">
+                <h4 className="mb-4 font-bold text-school-navy text-xl">{activity.category}</h4>
+                <ul className="space-y-2 text-muted-foreground text-sm">
                   {activity.clubs.map((club, idx) => (
-                    <li key={idx} className="flex items-center justify-center">
-                      <div className="w-1.5 h-1.5 bg-school-gold rounded-full mr-2"></div>
+                    <li key={idx} className="flex justify-center items-center">
+                      <div className="bg-school-gold mr-2 rounded-full w-1.5 h-1.5"></div>
                       {club}
                     </li>
                   ))}
@@ -104,14 +104,14 @@ const StudentLifeSection = () => {
 
         {/* School Events */}
         <div className="mb-16">
-          <h3 className="text-3xl font-bold text-school-navy text-center mb-12">
+          <h3 className="mb-12 font-bold text-school-navy text-3xl text-center">
             Annual Events & Celebrations
           </h3>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="gap-8 grid md:grid-cols-2 lg:grid-cols-3">
             {events.map((event, index) => (
-              <Card key={index} className="school-card group hover:scale-105 transition-transform duration-300">
-                <div className="text-4xl mb-4 text-center">{event.image}</div>
-                <h4 className="text-xl font-bold text-school-navy mb-3">{event.title}</h4>
+              <Card key={index} className="group hover:scale-105 transition-transform duration-300 school-card">
+                <div className="mb-4 text-4xl text-center">{event.image}</div>
+                <h4 className="mb-3 font-bold text-school-navy text-xl">{event.title}</h4>
                 <p className="text-muted-foreground">{event.description}</p>
               </Card>
             ))}
@@ -120,15 +120,15 @@ const StudentLifeSection = () => {
 
         {/* House System */}
         <div className="school-card-premium">
-          <div className="text-center mb-12">
-            <h3 className="text-3xl font-bold text-school-navy mb-6">House System</h3>
-            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+          <div className="mb-12 text-center">
+            <h3 className="mb-6 font-bold text-school-navy text-3xl">House System</h3>
+            <p className="mx-auto max-w-3xl text-muted-foreground text-lg">
               Our house system promotes healthy competition, leadership development, and school spirit. 
               Students are allocated to one of four houses upon admission.
             </p>
           </div>
           
-          <div className="grid md:grid-cols-4 gap-6">
+          <div className="gap-6 grid md:grid-cols-4">
             {[
               { name: "Unity House", color: "bg-red-500", motto: "Together We Achieve" },
               { name: "Progress House", color: "bg-blue-500", motto: "Forward Ever, Backward Never" },
@@ -137,27 +137,27 @@ const StudentLifeSection = () => {
             ].map((house, index) => (
               <div key={index} className="text-center">
                 <div className={`w-20 h-20 ${house.color} rounded-full mx-auto mb-4 flex items-center justify-center`}>
-                  <Trophy className="h-10 w-10 text-white" />
+                  <Trophy className="w-10 h-10 text-white" />
                 </div>
-                <h4 className="text-lg font-bold text-school-navy mb-2">{house.name}</h4>
-                <p className="text-sm text-muted-foreground italic">"{house.motto}"</p>
+                <h4 className="mb-2 font-bold text-school-navy text-lg">{house.name}</h4>
+                <p className="text-muted-foreground text-sm italic">"{house.motto}"</p>
               </div>
             ))}
           </div>
         </div>
 
         {/* Gallery CTA */}
-        <div className="text-center mt-16">
-          <div className="school-card max-w-2xl mx-auto">
-            <Camera className="h-16 w-16 text-school-gold mx-auto mb-6" />
-            <h3 className="text-2xl font-bold text-school-navy mb-4">
+        <div className="mt-16 text-center">
+          <div className="mx-auto max-w-2xl school-card">
+            <Camera className="mx-auto mb-6 w-16 h-16 text-school-gold" />
+            <h3 className="mb-4 font-bold text-school-navy text-2xl">
               See Our Students in Action
             </h3>
-            <p className="text-muted-foreground mb-6">
-              Browse our photo gallery to see the vibrant student life at Prime Scholars Academy. 
+            <p className="mb-6 text-muted-foreground">
+              Browse our photo gallery to see the vibrant student life at Confluence Int School. 
               From classroom activities to sports events, capture the essence of our school community.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex sm:flex-row flex-col justify-center gap-4">
               <Button variant="admission" size="lg">
                 View Photo Gallery
               </Button>

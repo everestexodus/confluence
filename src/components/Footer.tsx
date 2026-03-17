@@ -24,32 +24,32 @@ const Footer = () => {
 
   return (
     <footer className="bg-school-navy text-white">
-      <div className="container mx-auto px-4 lg:px-6 py-16">
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+      <div className="mx-auto px-4 lg:px-6 py-16 container">
+        <div className="gap-8 grid md:grid-cols-2 lg:grid-cols-4 mb-12">
           {/* School Info */}
           <div className="lg:col-span-1">
             <div className="flex items-center space-x-3 mb-6">
-              <div className="p-2 bg-school-gold rounded-lg">
-                <GraduationCap className="h-6 w-6 text-school-navy" />
+              <div className="bg-school-gold p-2 rounded-lg">
+                <GraduationCap className="w-6 h-6 text-school-navy" />
               </div>
               <div>
-                <h3 className="text-xl font-bold">Prime Scholars</h3>
-                <p className="text-sm text-white/80">Academy</p>
+                <h3 className="font-bold text-xl">Prime Scholars</h3>
+                <p className="text-white/80 text-sm">Academy</p>
               </div>
             </div>
-            <p className="text-white/80 mb-6 leading-relaxed">
+            <p className="mb-6 text-white/80 leading-relaxed">
               Nurturing tomorrow's leaders through academic excellence, character development, 
-              and holistic education in the heart of Abuja.
+              and holistic education in the heart of kogi.
             </p>
             <div className="flex space-x-4">
               {socialLinks.map((social, index) => (
                 <a
                   key={index}
                   href={social.url}
-                  className="p-2 bg-white/10 rounded-lg hover:bg-school-gold hover:text-school-navy transition-colors"
+                  className="bg-white/10 hover:bg-school-gold p-2 rounded-lg hover:text-school-navy transition-colors"
                   aria-label={social.name}
                 >
-                  <social.icon className="h-5 w-5" />
+                  <social.icon className="w-5 h-5" />
                 </a>
               ))}
             </div>
@@ -57,7 +57,7 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-lg font-bold mb-6">Quick Links</h4>
+            <h4 className="mb-6 font-bold text-lg">Quick Links</h4>
             <ul className="space-y-3">
               {quickLinks.map((link, index) => (
                 <li key={index}>
@@ -74,7 +74,7 @@ const Footer = () => {
 
           {/* Academic Programs */}
           <div>
-            <h4 className="text-lg font-bold mb-6">Academic Programs</h4>
+            <h4 className="mb-6 font-bold text-lg">Academic Programs</h4>
             <ul className="space-y-3">
               {academicPrograms.map((program, index) => (
                 <li key={index}>
@@ -91,18 +91,18 @@ const Footer = () => {
 
           {/* Contact Info */}
           <div>
-            <h4 className="text-lg font-bold mb-6">Contact Info</h4>
+            <h4 className="mb-6 font-bold text-lg">Contact Info</h4>
             <div className="space-y-4">
               <div className="flex items-start space-x-3">
-                <MapPin className="h-5 w-5 text-school-gold mt-1 flex-shrink-0" />
+                <MapPin className="flex-shrink-0 mt-1 w-5 h-5 text-school-gold" />
                 <div className="text-white/80 text-sm">
                   <p>Plot 123, Cadastral Zone A07</p>
-                  <p>Wuse 2, Abuja, FCT</p>
+                  <p>Wuse 2, kogi, FCT</p>
                 </div>
               </div>
               
               <div className="flex items-center space-x-3">
-                <Phone className="h-5 w-5 text-school-gold flex-shrink-0" />
+                <Phone className="flex-shrink-0 w-5 h-5 text-school-gold" />
                 <div className="text-white/80 text-sm">
                   <p>+234 809 123 4567</p>
                   <p>+234 806 789 0123</p>
@@ -110,7 +110,7 @@ const Footer = () => {
               </div>
               
               <div className="flex items-center space-x-3">
-                <Mail className="h-5 w-5 text-school-gold flex-shrink-0" />
+                <Mail className="flex-shrink-0 w-5 h-5 text-school-gold" />
                 <div className="text-white/80 text-sm">
                   <p>info@primescholars.edu.ng</p>
                   <p>admissions@primescholars.edu.ng</p>
@@ -121,10 +121,10 @@ const Footer = () => {
         </div>
 
         {/* Bottom Section */}
-        <div className="border-t border-white/20 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="text-white/60 text-sm mb-4 md:mb-0">
-              <p>&copy; 2024 Prime Scholars Academy. All rights reserved.</p>
+        <div className="pt-8 border-white/20 border-t">
+          <div className="flex md:flex-row flex-col justify-between items-center">
+            <div className="mb-4 md:mb-0 text-white/60 text-sm">
+              <p>&copy; 2024 Confluence Int School. All rights reserved.</p>
             </div>
             <div className="flex space-x-6 text-sm">
               <a href="#" className="text-white/60 hover:text-school-gold transition-colors">
